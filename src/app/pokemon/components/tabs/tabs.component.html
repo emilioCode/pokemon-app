@@ -1,1 +1,18 @@
-<p>tabs works!</p>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" 
+        [ngClass]="{ 'active': currentTab === 'tab-pokemons' }"
+        (click)="currentTab = 'tab-pokemons'"
+         href="#">
+         Pokémons
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" 
+        [ngClass]="{ 'active': currentTab === 'tab-favorites' }"
+        (click)="currentTab = 'tab-favorites'"
+         href="#">
+         Favorites
+      </a>
+    </li>
+  </ul>
