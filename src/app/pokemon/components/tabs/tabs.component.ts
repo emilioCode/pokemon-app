@@ -16,11 +16,11 @@ export class TabsComponent {
   // public currentTab: Tabs  = 'tab-pokemons' //?tab-favorites | tab-pokemons (option 1)
   // public currentTab : Tabs = Tabs.tabPokemons; // with enum (option 2)
   public tabs = [
-    {title: 'Pokémons', tab: 'tabPokemons', },
+    {title: 'Pokémons', tab: 'tabPokemons' },
     {title: 'Favorites', tab: 'tabfavorites'}
   ]
   public currentTab:string = this.tabs[0].tab;
-  
+
   constructor() { console.log(this.tabs) }
 
 
