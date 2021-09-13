@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-type Tabs = 'tab-favorites' | 'tab-pokemons'; //with 'type' datatype option 1
+// type Tabs = 'tab-favorites' | 'tab-pokemons'; //with 'type' datatype option 1
 // enum Tabs{ //option 2
 //   tabfavorites,
 //   tabPokemons
@@ -13,10 +13,15 @@ type Tabs = 'tab-favorites' | 'tab-pokemons'; //with 'type' datatype option 1
 })
 export class TabsComponent {
 
-  public currentTab: Tabs  = 'tab-pokemons' //?tab-favorites | tab-pokemons (option 1)
+  // public currentTab: Tabs  = 'tab-pokemons' //?tab-favorites | tab-pokemons (option 1)
   // public currentTab : Tabs = Tabs.tabPokemons; // with enum (option 2)
-
-  constructor() { }
+  public tabs = [
+    {title: 'Pokémons', tab: 'tabPokemons', },
+    {title: 'Favorites', tab: 'tabfavorites'}
+  ]
+  public currentTab:string = this.tabs[0].tab;
+  
+  constructor() { console.log(this.tabs) }
 
 
 }
